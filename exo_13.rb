@@ -1,6 +1,12 @@
-number = 0
+puts "Combien d'emails désirez-vous ? "
 
-15.times do
-puts "jean.dupont.#{number}@email.fr"
-number = number + 1
-end
+email = gets.chomp.to_i
+
+liste = Array.new (email) 
+i = 0
+
+while i < email do
+   i += 1
+   liste [i] = "jean.dupont.#{i}@email.com"
+    puts liste [i]
+end 
