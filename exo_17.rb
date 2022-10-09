@@ -1,10 +1,13 @@
-puts "Donne moi un chiffre entre 1 et 25 : "
-print "> "
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+print ">"
+number = gets.chomp.to_i
 
-rows = gets.chomp.to_i
-
-for row in 0..rows
-    (rows-row).times {print " "}
-    row.times{print "#"}
-    puts
-end
+if number <= 25  
+    number.times do |i|
+        i = i + 1
+        aird = i-1
+        airg = number - i
+        pyramide = " " * airg + "#" * i + "#" * aird 
+        puts pyramide 
+    end
+end 
